@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+    padding: 24px 10px;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.container{
+    display: grid;
+    gap: 20px;
+    width: 80%;
+    width: min(90%, 900px);
+
+}
+.header{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.ads h2{
+    color: #502050;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+.footer{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.profile .dp{
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.review{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+.review > div{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 4px 8px;
+    background-color: #f6eef8;
+    border-radius: 999px;
+    width: fit-content;
+    max-width: 100%;
+    
+}
+.star{
+    color: #f59e0b;
+    font-size: 18px;
+
+}
+.rate{
+  font-weight: 600;
+  color: #4b2354;
+}
+.first-review{
+  margin-left: 0;
+}
+
+.second-review{
+  margin-left: 40px;
+}
+
+.third-review{
+  margin-left: 70px;
+}
+.box{
+    background-color: #511f50;
+    padding: 16px;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.box .name{
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: white;
+}
+.profile-details{
+    display: flex;
+    flex-direction: column;
+}
+.profile .buyer{
+    color: #ca2a9a;
+}
+.buyer-review{
+    color: white;
+    line-height: 1.2;
+}
+.ads-detail{
+    color: #9a8e9a;
+    line-height: 1.4;   
+}
+@media (max-width: 900px){
+
+    .container{
+        width: min(90%, 900px);
+    }
+    .review > div{
+        margin-left: 0;
+        justify-content: center;
+    }
+    .header{
+        gap: 5px;
+    }
+    .first-review,
+  .second-review,
+  .third-review{
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+@media (max-width: 600px){
+  .container{
+    padding: 10px 20px;
+  }
+  .review > div{
+    padding: 20px;
+    justify-content: center;
+  }
+  .box{
+    padding: 30px;
+  }
+}
